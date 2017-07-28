@@ -19,11 +19,11 @@ Also, username and tweet counts are printed.
 ```
 ./kafka/kafka_2.11-0.11.0.0/bin/kafka-server-start.sh ./kafka/kafka_2.11-0.11.0.0/config/server.properties
 ```
-3. Run [kafka_push_listener.py](https://github.com/kaantas/kafka-twitter-spark-streaming/blob/master/kafka_push_listener.py) with IPython.
+3. Run [kafka_push_listener.py](https://github.com/kaantas/kafka-twitter-spark-streaming/blob/master/kafka_push_listener.py) with Python version 3.
 ```
-run kafka_push_listener.py
+PYSPARK_PYTHON=python3 bin/spark-submit kafka_push_listener.py
 ```
-4. Run [kafka_twitter_spark_streaming.py](https://github.com/kaantas/kafka-twitter-spark-streaming/blob/master/kafka_twitter_spark_streaming.py)
+4. Run [kafka_twitter_spark_streaming.py](https://github.com/kaantas/kafka-twitter-spark-streaming/blob/master/kafka_twitter_spark_streaming.py) with Python version 3.
 ```
-PYSPARK_PYTHON=python3 bin/spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0 ~/Documents/kafka_twitter_spark_streaming.py
+PYSPARK_PYTHON=python3 bin/spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0 kafka_twitter_spark_streaming.py
 ```
